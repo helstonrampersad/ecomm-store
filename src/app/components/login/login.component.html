@@ -5,6 +5,7 @@
       id="username"
       type="text"
       [formControl]="username"
+      matInput
       placeholder="Enter your username"
     />
   </div>
@@ -15,9 +16,10 @@
       id="password"
       type="password"
       [formControl]="password"
+      matInput
       placeholder="Enter your password"
     />
   </div>
 
-  <button (click)="login()">Login</button>
+  <button mat-button color="primary" (click)="login()">Login</button>
 </div>
