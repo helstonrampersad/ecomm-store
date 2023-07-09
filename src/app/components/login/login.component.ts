@@ -12,10 +12,18 @@ export class LoginComponent {
     password: new FormControl('', Validators.required),
   });
 
+  get username() {
+    return this.loginForm.get('username');
+  }
+
+  get password() {
+    return this.loginForm.get('password');
+  }
+
   login() {
     if (this.loginForm.valid) {
-      const username = this.loginForm.get('username')!.value;
-      const password = this.loginForm.get('password')!.value;
+      const username = this.username!.value;
+      const password = this.password!.value;
 
       console.log('Username:', username);
       console.log('Password:', password);
